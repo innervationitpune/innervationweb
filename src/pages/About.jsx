@@ -1,7 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useNavigate } from "react-router-dom";
 
 const About = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="pt-16">
       {/* Hero Section */}
@@ -25,7 +28,7 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6">Schedule a Meeting</h2>
           <p className="text-gray-600 mb-6">Connect with our experts to discuss your business needs.</p>
-          <button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition">
+          <button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition" onClick={() => navigate("/pagenotfound")}>
             Book Now
           </button>
         </div>
@@ -60,7 +63,7 @@ const About = () => {
               <p className="text-gray-600 mb-4">
                 Committed To Keep People Healthy & Safe. Our consultants bring deep expertise in areas such as cloud computing, cybersecurity, data analytics, and business intelligence, enabling us to offer holistic strategies that address both technical and business needs. We go beyond advice; we roll up our sleeves and help you implement, monitor, and continuously improve your solutions, ensuring lasting success.
               </p>
-              <button className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
+              <button className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition" onClick={() => navigate("/pagenotfound")}>
                 Get in Touch
               </button>
             </motion.div>
